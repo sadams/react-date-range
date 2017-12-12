@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start-dev": "babel ./src --watch --out-dir ./lib & cd demo && npm install && npm run start-dev",
+    "postinstall": "postinstall-build lib",
     "prebuild": "rm -rf lib/*",
     "build": "babel ./src --out-dir ./lib",
     "prepublish": "npm run build"
@@ -28,6 +29,7 @@
   "dependencies": {
     "classnames": "^2.2.1",
     "moment": "^2.19.4",
+    "postinstall-build": "^5.0.1",
     "prop-types": "^15.5.10"
   },
   "peerDependencies": {
